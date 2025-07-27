@@ -6,7 +6,7 @@
 // Create Date: 2023/12/09 13:25:08
 // Design Name: 
 // Module Name: timerSelector
-// Project Name: 
+// Project Name: GateTris
 // Target Devices: 
 // Tool Versions: 
 // Description: 

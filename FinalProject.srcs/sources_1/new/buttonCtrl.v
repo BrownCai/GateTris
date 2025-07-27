@@ -6,7 +6,7 @@
 // Create Date: 2023/11/22 22:49:25
 // Design Name: Tetris
 // Module Name: buttonCtrl
-// Project Name: FinalProject
+// Project Name: GateTris
 // Target Devices: PYNQ-Z2
 // Tool Versions: Vivado 2020.1
 // Description: 
@@ -15,12 +15,23 @@
 // 
 // Revision:
 // Revision 0.01 - File Created
-// Additional Comments: Edited based on LED toggling control of Lab3.
-//                      This module realized the function of more than one signal 
+// Additional Comments: This module realized the function of more than one signal 
 //                      output when more than one buttons are pushed at the same time.
 //                      This module also generate control signals for patterns.
 // 
 //////////////////////////////////////////////////////////////////////////////////
+
+// ----------------------------------------------------------------------------
+// 2025/07
+// 开源协议 / Open Source License:
+// 本代码采用AGPL-3.0许可证 - Licensed under AGPL-3.0
+//
+// 学术诚信提示 / Academic Integrity Notice:
+// 直接复制代码将触发AGPL开源传染条款
+// Direct copying triggers AGPL's copyleft requirements
+// 未经授权用于课程作业将面临学术不端调查
+// Unauthorized academic use will cause academic misconduct investigation
+// ----------------------------------------------------------------------------
 
 module buttonCtrl
     #(parameter CLK_FREQ=25_000_000,

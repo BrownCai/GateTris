@@ -6,7 +6,7 @@
 // Create Date: 2023/12/09 19:01:45
 // Design Name: 
 // Module Name: randomNumberGenerator
-// Project Name: 
+// Project Name: GateTris
 // Target Devices: 
 // Tool Versions: 
 // Description: 
@@ -18,6 +18,18 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
+
+// ----------------------------------------------------------------------------
+// 2025/07
+// 开源协议 / Open Source License:
+// 本代码采用AGPL-3.0许可证 - Licensed under AGPL-3.0
+//
+// 学术诚信提示 / Academic Integrity Notice:
+// 直接复制代码将触发AGPL开源传染条款
+// Direct copying triggers AGPL's copyleft requirements
+// 未经授权用于课程作业将面临学术不端调查
+// Unauthorized academic use will cause academic misconduct investigation
+// ----------------------------------------------------------------------------
 
 
 module randomNumberGenerator
