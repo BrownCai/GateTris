@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Dec  3 22:10:48 2023
+# Process ID: 14668
+# Current directory: D:/CircuitProjects/Xilinx/FinalProject/FinalProject.runs/design_1_Debounce_Switch_0_2_synth_1
+# Command line: vivado.exe -log design_1_Debounce_Switch_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_Debounce_Switch_0_2.tcl
+# Log file: D:/CircuitProjects/Xilinx/FinalProject/FinalProject.runs/design_1_Debounce_Switch_0_2_synth_1/design_1_Debounce_Switch_0_2.vds
+# Journal file: D:/CircuitProjects/Xilinx/FinalProject/FinalProject.runs/design_1_Debounce_Switch_0_2_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_Debounce_Switch_0_2.tcl -notrace

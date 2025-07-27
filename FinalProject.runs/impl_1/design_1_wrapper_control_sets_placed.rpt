@@ -1,0 +1,125 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Dec 11 01:36:49 2023
+| Host         : WellDone running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    47 |
+|    Minimum number of control sets                        |    47 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   191 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    47 |
+| >= 0 to < 4        |     4 |
+| >= 4 to < 6        |     5 |
+| >= 6 to < 8        |     4 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    33 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              24 |           16 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             294 |           96 |
+| Yes          | No                    | No                     |             380 |          145 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             471 |          216 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------------------+------------------------------------------------------------------------+------------------------------------------------------------------------+------------------+----------------+--------------+
+|                   Clock Signal                  |                              Enable Signal                             |                            Set/Reset Signal                            | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------------------------+------------------------------------------------------------------------+------------------------------------------------------------------------+------------------+----------------+--------------+
+|                                                 |                                                                        | design_1_i/mainPattern_0/inst/r_oGreen[3]                              |                1 |              1 |         1.00 |
+|                                                 |                                                                        | design_1_i/mainPattern_0/inst/r_oRed_reg[2]_i_2_n_0                    |                1 |              1 |         1.00 |
+|  design_1_i/mainPattern_0/inst/r_oRed_reg[3]/G0 |                                                                        |                                                                        |                1 |              1 |         1.00 |
+|                                                 |                                                                        | design_1_i/mainPattern_0/inst/r_oGreen[2]                              |                2 |              2 |         1.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             |                                                                        | design_1_i/buttonCtrl_0/inst/p_1_in0                                   |                4 |              4 |         1.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/buttonCtrl_0/inst/r_oShapeSize[8]_i_1_n_0                   | design_1_i/buttonCtrl_0/inst/p_1_in0                                   |                1 |              4 |         4.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/buttonCtrl_0/inst/r_oShapeX[8]_i_2_n_0                      | design_1_i/buttonCtrl_0/inst/p_1_in0                                   |                2 |              4 |         2.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/buttonCtrl_0/inst/r_oShapeY[7]_i_1_n_0                      | design_1_i/buttonCtrl_0/inst/p_1_in0                                   |                3 |              4 |         1.33 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/random/highFreq/E[0]                     | design_1_i/mainPattern_0/inst/random/highFreq/SR[0]                    |                1 |              4 |         4.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/buttonCtrl_0/inst/timer_inst1/r_oShapeSize_reg[4][0]        | design_1_i/buttonCtrl_0/inst/timer_inst1/SR[0]                         |                4 |              6 |         1.50 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/buttonCtrl_0/inst/timer_inst1/E[0]                          | design_1_i/buttonCtrl_0/inst/timer_inst1/FSM_onehot_rCurr_reg[14]_0[0] |                3 |              6 |         2.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/buttonCtrl_0/inst/timer_inst1/FSM_onehot_rCurr_reg[12]_1[0] | design_1_i/buttonCtrl_0/inst/timer_inst1/iRst_0[0]                     |                4 |              6 |         1.50 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/scoreCounter[6]_i_1_n_0                  | design_1_i/mainPattern_0/inst/still[1][19]_i_1_n_0                     |                3 |              7 |         2.33 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/VGA_timings_0/inst/cntH/E[0]                                | design_1_i/Debounce_Switch_Rst/inst/o_Switch                           |                5 |             10 |         2.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             |                                                                        | design_1_i/buttonCtrl_0/inst/timer_inst1/r_CntCurr[0]_i_1_n_0          |                5 |             18 |         3.60 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             |                                                                        | design_1_i/Debounce_Switch_Down/inst/p_0_in                            |                5 |             18 |         3.60 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             |                                                                        | design_1_i/Debounce_Switch_Right/inst/p_0_in                           |                5 |             18 |         3.60 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             |                                                                        | design_1_i/Debounce_Switch_Rst/inst/p_0_in                             |                5 |             18 |         3.60 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             |                                                                        | design_1_i/Debounce_Switch_0/inst/p_0_in                               |                5 |             18 |         3.60 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             |                                                                        | design_1_i/Debounce_Switch_Left/inst/p_0_in                            |                5 |             18 |         3.60 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             |                                                                        | design_1_i/Debounce_Switch_Up/inst/p_0_in                              |                5 |             18 |         3.60 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/still[5][19]_i_1_n_0                     | design_1_i/mainPattern_0/inst/still[1][19]_i_1_n_0                     |                9 |             20 |         2.22 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/still[6][19]_i_1_n_0                     | design_1_i/mainPattern_0/inst/still[1][19]_i_1_n_0                     |                8 |             20 |         2.50 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/still[7][19]_i_1_n_0                     | design_1_i/mainPattern_0/inst/still[1][19]_i_1_n_0                     |                9 |             20 |         2.22 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/still[8][19]_i_1_n_0                     | design_1_i/mainPattern_0/inst/still[1][19]_i_1_n_0                     |               10 |             20 |         2.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/still[9][19]_i_1_n_0                     | design_1_i/mainPattern_0/inst/still[1][19]_i_1_n_0                     |                9 |             20 |         2.22 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/still[18][19]_i_1_n_0                    | design_1_i/mainPattern_0/inst/still[1][19]_i_1_n_0                     |                9 |             20 |         2.22 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/timer_Hard/E[0]                          | design_1_i/mainPattern_0/inst/timer_Hard/rDropNext079_out              |                6 |             20 |         3.33 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/still[17][19]_i_1_n_0                    | design_1_i/mainPattern_0/inst/still[1][19]_i_1_n_0                     |               10 |             20 |         2.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/sel                                      | design_1_i/mainPattern_0/inst/still[1][19]_i_1_n_0                     |                5 |             20 |         4.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/still[15][19]_i_1_n_0                    | design_1_i/mainPattern_0/inst/still[1][19]_i_1_n_0                     |               11 |             20 |         1.82 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/still[10][19]_i_1_n_0                    | design_1_i/mainPattern_0/inst/still[1][19]_i_1_n_0                     |                9 |             20 |         2.22 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/still[16][19]_i_1_n_0                    | design_1_i/mainPattern_0/inst/still[1][19]_i_1_n_0                     |               10 |             20 |         2.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/still[12][19]_i_1_n_0                    | design_1_i/mainPattern_0/inst/still[1][19]_i_1_n_0                     |               10 |             20 |         2.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/still[13][19]_i_1_n_0                    | design_1_i/mainPattern_0/inst/still[1][19]_i_1_n_0                     |                9 |             20 |         2.22 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/still[14][19]_i_1_n_0                    | design_1_i/mainPattern_0/inst/still[1][19]_i_1_n_0                     |                9 |             20 |         2.22 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/still[19][19]_i_1_n_0                    | design_1_i/mainPattern_0/inst/still[1][19]_i_1_n_0                     |                9 |             20 |         2.22 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             |                                                                        | design_1_i/mainPattern_0/inst/random/highFreq/r_CntCurr[0]_i_1__0_n_0  |                5 |             20 |         4.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/still[11][19]_i_1_n_0                    | design_1_i/mainPattern_0/inst/still[1][19]_i_1_n_0                     |               11 |             20 |         1.82 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             |                                                                        | design_1_i/mainPattern_0/inst/timer_SpeedUp/r_CntCurr[0]_i_1_n_0       |                6 |             22 |         3.67 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             |                                                                        |                                                                        |               15 |             23 |         1.53 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             |                                                                        | design_1_i/mainPattern_0/inst/timer_Hard/clear                         |                6 |             23 |         3.83 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             |                                                                        | design_1_i/mainPattern_0/inst/timer_Normal/r_CntCurr[0]_i_1__4_n_0     |                6 |             24 |         4.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             |                                                                        | design_1_i/mainPattern_0/inst/timer_Easy/r_CntCurr[0]_i_1__3_n_0       |                7 |             25 |         3.57 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             |                                                                        | design_1_i/Debounce_Switch_Rst/inst/o_Switch                           |               23 |             46 |         2.00 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/still[1][19]_i_2_n_0                     | design_1_i/mainPattern_0/inst/still[1][19]_i_1_n_0                     |               37 |             80 |         2.16 |
+|  design_1_i/clk_wiz_0/inst/clk_out1             | design_1_i/mainPattern_0/inst/timer_Hard/stateCurr_reg[1]_rep[0]       |                                                                        |              145 |            380 |         2.62 |
++-------------------------------------------------+------------------------------------------------------------------------+------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

@@ -1,0 +1,495 @@
+
+*** Running vivado
+    with args -log design_1_mainPattern_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_mainPattern_0_0.tcl
+
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source design_1_mainPattern_0_0.tcl -notrace
+Command: synth_design -top design_1_mainPattern_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+WARNING: [IP_Flow 19-3571] IP 'design_1_mainPattern_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16108
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1036.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_mainPattern_0_0' [d:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/bd/design_1/ip/design_1_mainPattern_0_0/synth/design_1_mainPattern_0_0.v:59]
+INFO: [Synth 8-6157] synthesizing module 'mainPattern' [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:23]
+	Parameter sHome bound to: 2'b00 
+	Parameter sEasy bound to: 2'b01 
+	Parameter sNormal bound to: 2'b10 
+	Parameter sHard bound to: 2'b11 
+	Parameter CLK_FREQ bound to: 25000000 - type: integer 
+	Parameter speedEasy bound to: 1 - type: integer 
+	Parameter speedNormal bound to: 2 - type: integer 
+	Parameter speedHard bound to: 5 - type: integer 
+	Parameter speedUp bound to: 10 - type: integer 
+	Parameter size bound to: 20 - type: integer 
+	Parameter WIDTH bound to: 640 - type: integer 
+	Parameter H_FP bound to: 16 - type: integer 
+	Parameter H_PW bound to: 96 - type: integer 
+	Parameter H_BP bound to: 48 - type: integer 
+	Parameter H_TOT bound to: 800 - type: integer 
+	Parameter HEIGHT bound to: 480 - type: integer 
+	Parameter V_FP bound to: 10 - type: integer 
+	Parameter V_PW bound to: 2 - type: integer 
+	Parameter V_BP bound to: 33 - type: integer 
+	Parameter V_TOT bound to: 525 - type: integer 
+	Parameter H_tetris bound to: 152 - type: integer 
+	Parameter V_tetris bound to: 30 - type: integer 
+	Parameter L_tetris bound to: 336 - type: integer 
+	Parameter W_tetris bound to: 75 - type: integer 
+	Parameter H_tip bound to: 160 - type: integer 
+	Parameter V_tip bound to: 125 - type: integer 
+	Parameter L_tip bound to: 320 - type: integer 
+	Parameter W_tip bound to: 52 - type: integer 
+	Parameter V_numberTens bound to: 296 - type: integer 
+	Parameter V_numberOnes bound to: 296 - type: integer 
+	Parameter H_numberTens bound to: 70 - type: integer 
+	Parameter H_numberOnes bound to: 118 - type: integer 
+	Parameter L_numberTens bound to: 32 - type: integer 
+	Parameter L_numberOnes bound to: 32 - type: integer 
+	Parameter W_numberTens bound to: 44 - type: integer 
+	Parameter W_numberOnes bound to: 44 - type: integer 
+	Parameter TetrisBlockSize bound to: 20 - type: integer 
+	Parameter BeginH bound to: 20 - type: integer 
+	Parameter BeginV bound to: 20 - type: integer 
+	Parameter OuterH bound to: 600 - type: integer 
+	Parameter InnerH bound to: 580 - type: integer 
+	Parameter OuterV bound to: 440 - type: integer 
+	Parameter InnerV bound to: 420 - type: integer 
+	Parameter centerV bound to: 80 - type: integer 
+	Parameter centerH bound to: 80 - type: integer 
+	Parameter sInit bound to: 3'b000 
+	Parameter sNewTetris bound to: 3'b001 
+	Parameter sDrop bound to: 3'b010 
+	Parameter sTouchDetect bound to: 3'b011 
+	Parameter sStore bound to: 3'b100 
+	Parameter sFixedChange bound to: 3'b101 
+	Parameter sLeft bound to: 3'b110 
+	Parameter sRight bound to: 3'b111 
+WARNING: [Synth 8-6104] Input port 'iHS' has an internal driver [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:99]
+WARNING: [Synth 8-6104] Input port 'iVS' has an internal driver [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:100]
+INFO: [Synth 8-6157] synthesizing module 'randomNumberGenerator' [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/randomNumberGenerator.v:23]
+	Parameter CLK_FREQ bound to: 25000000 - type: integer 
+	Parameter ratio bound to: 30 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'timer' [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/timer.v:23]
+	Parameter CLK_FREQ bound to: 25000000 - type: integer 
+	Parameter ratio bound to: 30 - type: integer 
+	Parameter N bound to: 20 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'timer' (1#1) [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/timer.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'randomNumberGenerator' (2#1) [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/randomNumberGenerator.v:23]
+INFO: [Synth 8-6157] synthesizing module 'timer__parameterized0' [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/timer.v:23]
+	Parameter CLK_FREQ bound to: 25000000 - type: integer 
+	Parameter ratio bound to: 1 - type: integer 
+	Parameter N bound to: 25 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'timer__parameterized0' (2#1) [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/timer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'timer__parameterized1' [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/timer.v:23]
+	Parameter CLK_FREQ bound to: 25000000 - type: integer 
+	Parameter ratio bound to: 2 - type: integer 
+	Parameter N bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'timer__parameterized1' (2#1) [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/timer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'timer__parameterized2' [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/timer.v:23]
+	Parameter CLK_FREQ bound to: 25000000 - type: integer 
+	Parameter ratio bound to: 5 - type: integer 
+	Parameter N bound to: 23 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'timer__parameterized2' (2#1) [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/timer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'timerEn' [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/timerEn.v:23]
+	Parameter CLK_FREQ bound to: 25000000 - type: integer 
+	Parameter ratio bound to: 10 - type: integer 
+	Parameter N bound to: 22 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'timerEn' (3#1) [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/timerEn.v:23]
+INFO: [Synth 8-6157] synthesizing module 'timerSelector' [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/timerSelector.v:23]
+	Parameter sHome bound to: 2'b00 
+	Parameter sEasy bound to: 2'b01 
+	Parameter sNormal bound to: 2'b10 
+	Parameter sHard bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'timerSelector' (4#1) [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/timerSelector.v:23]
+INFO: [Synth 8-6157] synthesizing module 'comparator' [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/comparator.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'comparator' (5#1) [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/comparator.v:23]
+WARNING: [Synth 8-324] index 32 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1621]
+WARNING: [Synth 8-324] index 33 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1622]
+WARNING: [Synth 8-324] index 34 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1623]
+WARNING: [Synth 8-324] index 35 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1624]
+WARNING: [Synth 8-324] index 36 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1625]
+WARNING: [Synth 8-324] index 37 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1626]
+WARNING: [Synth 8-324] index 38 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1627]
+WARNING: [Synth 8-324] index 39 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1628]
+WARNING: [Synth 8-324] index 40 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1629]
+WARNING: [Synth 8-324] index 41 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1630]
+WARNING: [Synth 8-324] index 42 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1631]
+WARNING: [Synth 8-324] index 43 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1632]
+WARNING: [Synth 8-324] index 32 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1644]
+WARNING: [Synth 8-324] index 33 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1645]
+WARNING: [Synth 8-324] index 34 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1646]
+WARNING: [Synth 8-324] index 35 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1647]
+WARNING: [Synth 8-324] index 36 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1648]
+WARNING: [Synth 8-324] index 37 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1649]
+WARNING: [Synth 8-324] index 38 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1650]
+WARNING: [Synth 8-324] index 39 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1651]
+WARNING: [Synth 8-324] index 40 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1652]
+WARNING: [Synth 8-324] index 41 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1653]
+WARNING: [Synth 8-324] index 42 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1654]
+WARNING: [Synth 8-324] index 43 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1655]
+WARNING: [Synth 8-324] index 32 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1667]
+WARNING: [Synth 8-324] index 33 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1668]
+WARNING: [Synth 8-324] index 34 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1669]
+WARNING: [Synth 8-324] index 35 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1670]
+WARNING: [Synth 8-324] index 36 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1671]
+WARNING: [Synth 8-324] index 37 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1672]
+WARNING: [Synth 8-324] index 38 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1673]
+WARNING: [Synth 8-324] index 39 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1674]
+WARNING: [Synth 8-324] index 40 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1675]
+WARNING: [Synth 8-324] index 41 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1676]
+WARNING: [Synth 8-324] index 42 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1677]
+WARNING: [Synth 8-324] index 43 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1678]
+WARNING: [Synth 8-324] index 32 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1690]
+WARNING: [Synth 8-324] index 33 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1691]
+WARNING: [Synth 8-324] index 34 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1692]
+WARNING: [Synth 8-324] index 35 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1693]
+WARNING: [Synth 8-324] index 36 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1694]
+WARNING: [Synth 8-324] index 37 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1695]
+WARNING: [Synth 8-324] index 38 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1696]
+WARNING: [Synth 8-324] index 39 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1697]
+WARNING: [Synth 8-324] index 40 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1698]
+WARNING: [Synth 8-324] index 41 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1699]
+WARNING: [Synth 8-324] index 42 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1700]
+WARNING: [Synth 8-324] index 43 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1701]
+WARNING: [Synth 8-324] index 32 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1713]
+WARNING: [Synth 8-324] index 33 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1714]
+WARNING: [Synth 8-324] index 34 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1715]
+WARNING: [Synth 8-324] index 35 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1716]
+WARNING: [Synth 8-324] index 36 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1717]
+WARNING: [Synth 8-324] index 37 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1718]
+WARNING: [Synth 8-324] index 38 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1719]
+WARNING: [Synth 8-324] index 39 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1720]
+WARNING: [Synth 8-324] index 40 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1721]
+WARNING: [Synth 8-324] index 41 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1722]
+WARNING: [Synth 8-324] index 42 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1723]
+WARNING: [Synth 8-324] index 43 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1724]
+WARNING: [Synth 8-324] index 32 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1736]
+WARNING: [Synth 8-324] index 33 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1737]
+WARNING: [Synth 8-324] index 34 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1738]
+WARNING: [Synth 8-324] index 35 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1739]
+WARNING: [Synth 8-324] index 36 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1740]
+WARNING: [Synth 8-324] index 37 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1741]
+WARNING: [Synth 8-324] index 38 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1742]
+WARNING: [Synth 8-324] index 39 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1743]
+WARNING: [Synth 8-324] index 40 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1744]
+WARNING: [Synth 8-324] index 41 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1745]
+WARNING: [Synth 8-324] index 42 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1746]
+WARNING: [Synth 8-324] index 43 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1747]
+WARNING: [Synth 8-324] index 32 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1759]
+WARNING: [Synth 8-324] index 33 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1760]
+WARNING: [Synth 8-324] index 34 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1761]
+WARNING: [Synth 8-324] index 35 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1762]
+WARNING: [Synth 8-324] index 36 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1763]
+WARNING: [Synth 8-324] index 37 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1764]
+WARNING: [Synth 8-324] index 38 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1765]
+WARNING: [Synth 8-324] index 39 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1766]
+WARNING: [Synth 8-324] index 40 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1767]
+WARNING: [Synth 8-324] index 41 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1768]
+WARNING: [Synth 8-324] index 42 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1769]
+WARNING: [Synth 8-324] index 43 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1770]
+WARNING: [Synth 8-324] index 32 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1782]
+WARNING: [Synth 8-324] index 33 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1783]
+WARNING: [Synth 8-324] index 34 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1784]
+WARNING: [Synth 8-324] index 35 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1785]
+WARNING: [Synth 8-324] index 36 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1786]
+WARNING: [Synth 8-324] index 37 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1787]
+WARNING: [Synth 8-324] index 38 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1788]
+WARNING: [Synth 8-324] index 39 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1789]
+WARNING: [Synth 8-324] index 40 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1790]
+WARNING: [Synth 8-324] index 41 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1791]
+WARNING: [Synth 8-324] index 42 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1792]
+WARNING: [Synth 8-324] index 43 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1793]
+WARNING: [Synth 8-324] index 32 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1805]
+WARNING: [Synth 8-324] index 33 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1806]
+WARNING: [Synth 8-324] index 34 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1807]
+WARNING: [Synth 8-324] index 35 out of range [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:1808]
+INFO: [Common 17-14] Message 'Synth 8-324' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'mainPattern' (6#1) [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_mainPattern_0_0' (7#1) [d:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/bd/design_1/ip/design_1_mainPattern_0_0/synth/design_1_mainPattern_0_0.v:59]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1036.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1036.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1036.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1036.586 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1036.586 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.125 . Memory (MB): peak = 1036.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1036.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1036.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1036.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'r_oRed_reg' [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:109]
+WARNING: [Synth 8-327] inferring latch for variable 'r_oGreen_reg' [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:110]
+WARNING: [Synth 8-327] inferring latch for variable 'r_oBlue_reg' [D:/CircuitProjects/Xilinx/FinalProject/FinalProject.srcs/sources_1/new/mainPattern.v:111]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1036.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 4     
+	   2 Input   20 Bit       Adders := 19    
+	   2 Input   13 Bit       Adders := 1     
+	   3 Input   11 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 64    
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	  32 Input   27 Bit        Muxes := 2     
+	   8 Input   27 Bit        Muxes := 2     
+	  32 Input   26 Bit        Muxes := 1     
+	   8 Input   26 Bit        Muxes := 1     
+	   2 Input   20 Bit        Muxes := 82    
+	   9 Input   12 Bit        Muxes := 2     
+	   2 Input   11 Bit        Muxes := 5     
+	   4 Input   11 Bit        Muxes := 1     
+	   5 Input   11 Bit        Muxes := 2     
+	  14 Input   11 Bit        Muxes := 1     
+	  13 Input   11 Bit        Muxes := 1     
+	   7 Input   11 Bit        Muxes := 1     
+	  10 Input   10 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 1     
+	  32 Input    6 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 33    
+	   6 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 2     
+	   3 Input    4 Bit        Muxes := 1     
+	  12 Input    4 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 5     
+	   4 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 2     
+	  32 Input    3 Bit        Muxes := 3     
+	   6 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 39    
+	   6 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 5     
+	   8 Input    1 Bit        Muxes := 1     
+	   9 Input    1 Bit        Muxes := 1     
+	  10 Input    1 Bit        Muxes := 1     
+	  11 Input    1 Bit        Muxes := 1     
+	  12 Input    1 Bit        Muxes := 1     
+	  13 Input    1 Bit        Muxes := 1     
+	  14 Input    1 Bit        Muxes := 1     
+	  15 Input    1 Bit        Muxes := 1     
+	  16 Input    1 Bit        Muxes := 2     
+	  17 Input    1 Bit        Muxes := 1     
+	  18 Input    1 Bit        Muxes := 1     
+	  19 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 3     
+	   5 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:30 . Memory (MB): peak = 1055.137 ; gain = 18.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++-------------------------+------------+---------------+----------------+
+|Module Name              | RTL Object | Depth x Width | Implemented As | 
++-------------------------+------------+---------------+----------------+
+|mainPattern              | two        | 32x8          | LUT            | 
+|mainPattern              | five       | 32x6          | LUT            | 
+|mainPattern              | seven      | 32x19         | LUT            | 
+|design_1_mainPattern_0_0 | two        | 32x8          | LUT            | 
+|design_1_mainPattern_0_0 | five       | 32x6          | LUT            | 
+|design_1_mainPattern_0_0 | seven      | 32x19         | LUT            | 
++-------------------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1055.137 ; gain = 18.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:37 . Memory (MB): peak = 1055.137 ; gain = 18.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1089.137 ; gain = 52.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:41 . Memory (MB): peak = 1094.727 ; gain = 58.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:41 . Memory (MB): peak = 1094.727 ; gain = 58.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:41 . Memory (MB): peak = 1094.727 ; gain = 58.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:41 . Memory (MB): peak = 1094.727 ; gain = 58.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.727 ; gain = 58.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.727 ; gain = 58.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |   209|
+|2     |LUT1   |    20|
+|3     |LUT2   |   559|
+|4     |LUT3   |   129|
+|5     |LUT4   |   266|
+|6     |LUT5   |   663|
+|7     |LUT6   |  1414|
+|8     |MUXF7  |   124|
+|9     |MUXF8  |    28|
+|10    |FDRE   |   959|
+|11    |LDC    |     4|
+|12    |LDCP   |     1|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.727 ; gain = 58.141
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:39 . Memory (MB): peak = 1094.727 ; gain = 58.141
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:42 . Memory (MB): peak = 1094.727 ; gain = 58.141
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1106.859 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 366 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1106.859 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  LDC => LDCE: 4 instances
+  LDCP => LDCP (GND, LDCE, LUT3(x2), VCC): 1 instance 
+
+INFO: [Common 17-83] Releasing license: Synthesis
+35 Infos, 106 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:48 . Memory (MB): peak = 1106.859 ; gain = 70.273
+INFO: [Common 17-1381] The checkpoint 'D:/CircuitProjects/Xilinx/FinalProject/FinalProject.runs/design_1_mainPattern_0_0_synth_1/design_1_mainPattern_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1174] Renamed 30 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/CircuitProjects/Xilinx/FinalProject/FinalProject.runs/design_1_mainPattern_0_0_synth_1/design_1_mainPattern_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_mainPattern_0_0_utilization_synth.rpt -pb design_1_mainPattern_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 11 01:35:30 2023...
