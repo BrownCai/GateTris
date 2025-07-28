@@ -10,8 +10,15 @@
 ## **0. 演示效果**
 ### **0.1. 难度选择**
 https://github.com/user-attachments/assets/14c16298-e1b9-41f9-9e08-8ee522572498
+
 ### **0.2. 移动、触底与新方块生成**
+https://github.com/user-attachments/assets/4be1c13c-a48a-4076-9d2f-f7adf2b00db4
+
 ### **0.3. 消除与计分**
+
+
+https://github.com/user-attachments/assets/b9570b66-544e-4d57-bd6f-76ca60f7cb5d
+
 
 ## **1. 控制逻辑**
 
