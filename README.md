@@ -1,91 +1,87 @@
-# **GateTris**
+# GateTris
 [![AGPL-3.0](https://img.shields.io/badge/License-AGPL%203.0-blue?logo=gnu)](LICENSE)
 ![FPGA Platform](https://img.shields.io/badge/FPGA-Xilinx-8716F?logo=xilinx)
-[![Academic Alert](https://img.shields.io/badge/ACADEMIC_USE-RESTRICTED-red?logo=academia)](#academic-warning)
-[![Detectie](https://img.shields.io/badge/Plagiarism_Detectie-ACTIEF-red)](#academic-warning)
+[![Academic Alert](https://img.shields.io/badge/ACADEMIC_USE-RESTRICTED-red?logo=academia)](#academic-integrity-warning)
+[![Detectie](https://img.shields.io/badge/Plagiarism_Detectie-ACTIEF-red)](#academic-integrity-warning)
 
 
-[English](README_en.md) | [简体中文](README.md)
+[简体中文](README_zh.md) | [English](README.md)
 
-## **0. 项目情况简述**
-本项目完全基于Verilog语言在Xilinx PYNQ-Z2开发板上实现，**不涉及Python脚本**，也**未调用ARM核功能**。
-
----
-
-## **1. 效果演示**
-PYNQ-Z2开发板通过Pmod VGA模块，将每个RGB通道的4位数字输出**经由简易DAC电路转换为模拟值**，并通过VGA接口连接显示器。使用开发板上的**四个轻触开关**输入控制信号。
-
-### **1.1. 难度选择**
-https://github.com/user-attachments/assets/14c16298-e1b9-41f9-9e08-8ee522572498
-
-*   **通过将**初始页面的红色方块**移动至**下方不同色块处，**可触发页面跳转**。  
-*   不同色块**对应不同难度**，每种难度下方块的**默认下落速度不同**。  
-
-### **1.2. 移动、触底与新方块生成**
-https://github.com/user-attachments/assets/4be1c13c-a48a-4076-9d2f-f7adf2b00db4
-
-*   该片段展示了俄罗斯方块的核心玩法：**横向移动**与**加速下落**。  
-*   当下落方块**碰撞**到底部或已有固定方块时，立即**转为固定状态**，并**随机生成新方块**。新方块将置于左上角的"**等待区**"，而原等待区中的方块将**进入操作区**转为可控下落方块。
-
-### **1.3. 消除与计分**
-https://github.com/user-attachments/assets/b9570b66-544e-4d57-bd6f-76ca60f7cb5d
-
-*   当任意一层**被完全填满**时，该层将被**消除**，同时其上方的固定方块会**依次下落**，左下方的计分区将**动态更新**。 
- 
----
-
-## **2. 项目设计思路**
-### **2.1. 状态机设计**
-![状态机设计](FSM.png)
-
-### **2.2. 控制逻辑设计**
-通过三个数组实现核心功能：  
-*   **移动数组(Moving Array)**：控制下落方块的渲染。由定时器驱动刷新，通过**将值重新分配至下一行**实现下落效果。  
-*   **静止数组(Still Array)**：管理已固定方块的显示。  
-*   **下一个数组(Next Array)**：控制等待区中方块的预览。  
-    - 通过硬件随机数分配形状  
-    - 定义并显示待下落方块  
-    - 方块生成时将其值**转移至移动数组**  
-    - 方块碰撞时将其值**迁移至静止数组**  
-  
-### **2.3. 显示逻辑设计**
-VGA协议实现包含以下模块：  
-#### **时序发生器**  
-- **基准时钟输入**：生成目标分辨率所需的像素时钟（本项目为640x480@60Hz，需25MHz）  
-- **同步计数器**：  
-  - *水平方向*：总周期800（640显示区 + 前沿16 + 同步脉宽96 + 后沿48）  
-  - *垂直方向*：总行数525（480显示区 + 前沿10 + 同步脉宽2 + 后沿33）  
-- **同步信号**：  
-  - `HSync`：低有效脉冲（同步脉宽96时钟周期）  
-  - `VSync`：低有效脉冲（同步脉宽2行）  
-
-#### **像素坐标生成器**  
-- 根据计数器值计算`(X,Y)`坐标  
-- **`显示使能信号(Display Enable)`**：在`0 ≤ X < 640`且`0 ≤ Y < 480`时有效  
-
-#### **视频数据流水线**  
-- 存储像素数据  
-- 地址计算：`Y × 行宽 + X`  
-- 当`显示使能信号`有效时输出RGB值 
-
-完成上述基础控制逻辑后，**只需由显示模块实时读取**控制模块传入的**坐标映射像素值**，即可渲染游戏画面。
+## **0. Project Overview**  
+This project is implemented entirely in Verilog on the Xilinx PYNQ-Z2 development board, with **no Python scripts** or **ARM core functionality** involved.  
 
 ---
 
-## **3. 项目特点**
-*   **硬件并行处理**实现**实时碰撞检测**，精度达像素级。  
-*   **基于时钟的随机数生成器**：  
-    - 使用**高频计数器**，其时钟分频参数**与主时钟互质**  
-    - 利用玩家操作的**时间随机性**近似真随机数  
-    - **减少逻辑资源占用**（相比算法RNG），但牺牲能效  
+## **1. Demo Effects**  
+The PYNQ-Z2 board uses a Pmod VGA module to convert 4-bit digital RGB outputs into analog values via a simple DAC circuit, connecting to a display via VGA. Control signals are input using the board's four buttons.
 
+### **1.1. Difficulty Selection**  
+https://github.com/user-attachments/assets/14c16298-e1b9-41f9-9e08-8ee522572498  
 
-### ⚠️ 学术诚信警告 {#academic-warning}
-> 1. 本仓库为鲁汶大学 Digital Desing Concept 课程设计代码，已加入学校代码查重系统  
-> 2. 采用AGPL-3.0协议：**直接复用需开源整个衍生工程**  
-> 3. 未经授权用于课程作业将导致：  
->    - 代码被强制公开（AGPL传染条款）  
->    - 面临学术不端调查
+*   By moving the red square on the initial screen to different colored blocks, a page transition is triggered.  
+*   Each color represents **a difficulty level**, with **distinct default falling speeds** for blocks.
 
+### **1.2. Movement, Landing & New Block Generation**  
+https://github.com/user-attachments/assets/4be1c13c-a48a-4076-9d2f-f7adf2b00db4  
 
+*   Demonstrates core Tetris mechanics: **lateral movement** and **accelerated descent**.  
+*   When a falling block **collides** with the bottom or stationary blocks, it **becomes fixed**, and a new block **spawns randomly**. The new block appears in the top-left "**queue area**", while the queued block **enters the playfield** as controllable.
 
+### **1.3. Line Clearance & Scoring**  
+https://github.com/user-attachments/assets/b9570b66-544e-4d57-bd6f-76ca60f7cb5d  
+
+*   When a row is **fully filled**, it **clears**, causing fixed blocks above to **cascade downward**. The score display **updates dynamically** at the bottom left. 
+
+---
+
+## **2. Design Methodology**  
+### **2.1. Finite State Machine (FSM)**  
+![Finit State Machine Design](FSM.png)
+
+### **2.2. Control Logic**  
+Three arrays implement core functionality:  
+*   **Moving Array**: Drives **falling block rendering**. Timer-triggered updates **reassign values to the next row** to simulate descent.  
+*   **Still Array**: Manages **stationary block display**.  
+*   **Next Array**: Controls preview blocks in the queue area.  
+    - **Randomly assigns shapes** via hardware-generated values.  
+    - **Defines and displays** the upcoming block.  
+    - **Transfers values** to the Moving Array upon spawn.  
+    - **Migrates values** to the Still Array upon collision. 
+
+### **2.3. Display Logic (VGA Protocol)**  
+Implementation includes:  
+#### **Timing Generator**  
+- **Pixel Clock**: 25MHz for 640x480@60Hz.  
+- **Sync Counters**:  
+  - *Horizontal*: 800-cycle period (640 visible + 16 front porch + 96 sync + 48 back porch).  
+  - *Vertical*: 525-line period (480 visible + 10 front porch + 2 sync + 33 back porch).  
+- **Sync Signals**:  
+  - `HSync`: Active-low pulse (96 cycles).  
+  - `VSync`: Active-low pulse (2 lines).  
+
+#### **Pixel Coordinate Engine**  
+- Calculates `(X,Y)` from counters.  
+- **`Display Enable`**: Active within `0 ≤ X < 640` and `0 ≤ Y < 480`.  
+
+#### **Video Pipeline**  
+- Buffers pixel data.  
+- Address = `Y × pixels_per_line + X`.  
+- Outputs RGB when `Display Enable` is high. 
+
+Upon implementing these fundamental control logics, **the display module simply renders the game visuals** by reading the **coordinate-mapped pixel values** transmitted from the control module.
+
+---
+
+## **3. Key Features**  
+*   **Parallel hardware processing** enables **instantaneous collision detection** with pixel-perfect accuracy.  
+*   **Clock-based entropy generator**:  
+    - Uses a **high-frequency counter** with clock ratios **coprime to the main clock**.  
+    - Human input **irregularities** approximate true randomness.  
+    - **Reduces logic utilization** (vs. algorithmic RNG) albeit at the cost of power efficiency. 
+
+### ⚠️ Academic Integrity Warning
+> 1. This repository contains code for Digital Design Concept lab design of KU Leuven, included in plagiarism detection  
+> 2. Licensed under AGPL-3.0: **Reuse requires FULL open-sourcing**  
+> 3. Unauthorized academic use will cause:  
+>    - Mandatory code disclosure (AGPL copyleft)  
+>    - Academic misconduct investigation
