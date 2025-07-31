@@ -36,7 +36,7 @@ https://github.com/user-attachments/assets/b9570b66-544e-4d57-bd6f-76ca60f7cb5d
 
 ## **2. Design Methodology**  
 ### **2.1. Finite State Machine (FSM)**  
-![Finit State Machine Design](FSM.png)
+![Finit State Machine Design](./FSM.png)
 
 ### **2.2. Control Logic**  
 Three arrays implement core functionality:  

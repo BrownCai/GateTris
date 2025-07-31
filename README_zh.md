@@ -36,7 +36,7 @@ https://github.com/user-attachments/assets/b9570b66-544e-4d57-bd6f-76ca60f7cb5d
 
 ## **2. 项目设计思路**
 ### **2.1. 状态机设计**
-![状态机设计](FSM.png)
+![状态机设计](./FSM.png)
 
 ### **2.2. 控制逻辑设计**
 通过三个数组实现核心功能：  
