@@ -8,7 +8,7 @@
 [English](README.md) | [简体中文](README_zh.md)
 
 ## **0. 项目情况简述**
-这是一个可选游戏难度的 **俄罗斯方块(Tetris)**。 本项目完全基于Verilog语言在Xilinx PYNQ-Z2开发板上实现，**不涉及Python脚本**，也**未调用ARM核功能**。
+这是一个可选游戏难度的 **俄罗斯方块(Tetris)**。 本项目完全基于Verilog语言在Xilinx PYNQ-Z2开发板上实现，**使用Vivado 2020.1开发**，**不涉及Python脚本**，也**未调用ARM核功能**。
 
 ---
 
