@@ -8,7 +8,7 @@
 [简体中文](README_zh.md) | [English](README.md)
 
 ## **0. Project Overview**  
-This project is a **Tetris Game** with different game difficulty choices. It was implemented entirely in Verilog on the Xilinx PYNQ-Z2 development board, with **no Python scripts** or **ARM core functionality** involved.  
+This project is a **Tetris Game** with different game difficulty choices. It was implemented entirely in Verilog on the Xilinx PYNQ-Z2 development board, with **no Python scripts** or **ARM core functionality** involved. **The Vivado version is 2020.1**.
 
 ---
 
